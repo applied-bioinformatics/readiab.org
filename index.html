@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>An Introduction to Applied Bioinformatics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>body { min-width: 800px; } .vcenter { margin-top: 20px } </style>
+</head>
+<body>
+    <a href="https://github.com/caporaso-lab/An-Introduction-to-Applied-Bioinformatics"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+    <div class="container">
+        <div class="row row-centered">
+            <div class="page-header">
+                <h1>An Introduction to Applied Bioinformatics</h1>
+                <p class='lead'>An <strong>I</strong>ntroduction to <strong>A</strong>pplied <strong>B</strong>ioinformatics (or IAB) is a free, open source interactive text that introduces readers to core concepts of bioinformatics in the context of their implementation and application.</p>
+            </div>
+            <div class="col-xs-4 col-centered">
+                <p><img src="http://readiab.org/IAB_files/logo.png" width=250px/></p>
+                <p>IAB is primarily being developed by <a href="http://caporasolab.us/people/greg-caporaso/">Greg Caporaso</a> (GitHub/Twitter: <a href="https://github.com/gregcaporaso">@gregcaporaso</a>) in the <a href="http://www.caporasolab.us/">Caporaso Lab</a> at <a href="http://www.nau.edu/">Northern Arizona University</a>. You can find information on the courses I teach on <a href="http://www.caporasolab.us/teaching">my teaching website</a> and information on my research and lab on <a href="http://www.caporasolab.us/">my lab website</a>.</p>
+                <br/><br/>
+            </div>
+            <div class="col-xs-8 col-centered">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><h4>Read Statically (All Platforms)</h4></div>
+                    <div class="panel-body">
+                        <p>Here you can find statically published copies of IAB with full output. There are several version to choose from:</p>
+                        <ul><li><a href="/book/latest/">the latest development version</a> (links may be unstable, but most recent content)
+                        </li><li><a href="/book/0.1.3/">the latest release version</a> (the most recent stable release)
+                        </li></ul><br/>
+
+                    <a href="http://readiab.org/book/latest/" class="btn btn-success btn-lg pull-right"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Read Latest Development Version</a>
+
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading"><h4>Read Interactively (OS X and Linux only)</h4></div>
+                    <div class="panel-body">
+                        <p>First install <a href="https://conda.io/miniconda.html" target="_blank">miniconda</a> then follow these instructions to install either the latest release or the latest development version of the book locally:</p>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#interactive-release" aria-controls="home" role="tab" data-toggle="tab">Latest Release</a></li>
+                            <li role="presentation"><a href="#interactive-dev" aria-controls="profile" role="tab" data-toggle="tab">Latest Development</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="interactive-release">
+<pre>$ conda create -n iab-0.1.3 -c etetoolkit -c conda-forge python=3.5 ete3 scikit-bio=0.4.2
+$ source activate iab-0.1.3
+$ pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/0.1.3.zip
+</pre>
+                        <p>Next download the latest release of the book:</p>
+                            <a href="http://readiab.org/book/0.1.3/IAB-notebooks.zip" class="btn btn-success"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Latest Release</a>
+                        <p></p>
+                        <p>Unzip the book, change to the new directory that is created, and run:</p>
+                        <pre>$ source activate iab-0.1.3
+$ jupyter notebook index.ipynb</pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="interactive-dev">
+<pre>$ conda create -n iab-latest -c etetoolkit -c conda-forge python=3.5 ete3 scikit-bio=0.4.2
+$ source activate iab-latest
+$ pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
+</pre>
+                        <p>Next download the latest development version of the book:</p>
+                         <a href="http://readiab.org/book/latest/IAB-notebooks.zip" class="btn btn-success"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Latest Development Version</a>
+                        <p></p>
+                        <p>Unzip the book, change to the new directory that is created, and run:</p>
+                        <pre>$ source activate iab-latest
+$ jupyter notebook index.ipynb</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row row-centered">
+            <div class="col-xs-6" >
+                <h3>Getting Involved:</h3>
+                <p>IAB is in early development stage. To see the plans for where the project will go, see the <a href="https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/milestones">project milestones</a>.</p>
+                <p>If you're interested in writing or editing content or code for IAB, see <a href="https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> and/or watch the below video:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/s9-aZrX5CY8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <br/>
+                <p> You can see the full list of <a href="https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/graphs/contributors">IAB contributors here</a>.</p>
+
+            </div>
+            <div class="col-xs-6">
+            <h3>Note:</h3>
+            <p>The code in the <code>iab</code> module is <strong>not sufficiently tested, documented, or optimized for production use</strong>, but is rather intended for educational use only. As code reaches those quality standards it is ported to <a href="http://www.scikit-bio.org/">scikit-bio</a>. I do not recommend using the code in the <code>iab</code> module outside of the text. In other words, don't <code>import iab</code> outside of the text - if you want access to the functionality in your own code, you should <code>import skbio</code>.</p></div>
+        </div>
+        <div class="row row-centered">
+             <div class="container">
+                  <div class="col-xs-4" >
+                      <a href="http://sloan.org" target="_blank"><img src="SloanLogo-primary-black.png" width=100%/></a>
+                  </div>
+                  <div class="col-xs-3 vcenter">
+                      <p class="small">IAB is funded in part by the <a href="http://sloan.org" target="_blank">Alfred P. Sloan Foundation</a>. Initial prototyping was funded in part by <a href="http://nau.edu/Research/Funding/Technology-Research-Initiative-Fund/" target="_blank">Arizona's Technology and Research Initiative Fund</a>.</p>
+                  </div>
+                  <div class="col-xs-1 vcenter"></div>
+                  <div class="col-xs-1 pull-right vcenter">
+                      <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="http://readiab.org/IAB_files/88x31.png"></a>
+                  </div>
+                  <div class="col-xs-3 pull-right vcenter">
+                      <p class='small'>An Introduction to Applied Bioinformatics by <a href="http://caporasolab.us/" target="_blank">The Caporaso Laboratory</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6636235-8', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
