@@ -28,7 +28,7 @@
                     <div class="panel-heading"><h4>Read Statically (All Platforms)</h4></div>
                     <div class="panel-body">
                         <p>Here you can find statically published copies of IAB with full output. There are several version to choose from:</p>
-                        <ul><li><a href="/book/latest/">the latest development version</a> (links may be unstable, but most recent content)
+                        <ul><li><a href="/book/latest/">the latest development version</a> (recommended: links may be unstable, but most recent content)
                         </li><li><a href="/book/0.1.3/">the latest release version</a> (the most recent stable release)
                         </li></ul><br/>
 
@@ -36,6 +36,9 @@
 
                     </div>
                 </div>
+
+
+
                 <div class="panel panel-info">
                     <div class="panel-heading"><h4>Read Interactively (OS X and Linux only)</h4></div>
                     <div class="panel-body">
@@ -43,13 +46,28 @@
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#interactive-release" aria-controls="home" role="tab" data-toggle="tab">Latest Release</a></li>
-                            <li role="presentation"><a href="#interactive-dev" aria-controls="profile" role="tab" data-toggle="tab">Latest Development</a></li>
+                            <li role="presentation" class="active"><a href="#interactive-dev" aria-controls="profile" role="tab" data-toggle="tab">Latest Development (Recommended)</a></li>
+                            <li role="presentation"><a href="#interactive-release" aria-controls="home" role="tab" data-toggle="tab">Latest Release</a></li>
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="interactive-release">
+                            <div role="tabpanel" class="tab-pane active" id="interactive-dev">
+<pre>$ conda update conda
+$ conda install wget
+$ wget https://raw.githubusercontent.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/master/environment.yml
+$ conda env create -n iab-latest -f environment.yml
+# OPTIONAL CLEANUP
+$ rm environment.yml
+</pre>
+                        <p>Next download the latest development version of the book:</p>
+                         <a href="http://readiab.org/book/latest/IAB-notebooks.zip" class="btn btn-success"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Latest Development Version</a>
+                        <p></p>
+                        <p>Unzip the book, change to the new directory that is created, and run:</p>
+                        <pre>$ conda activate iab-latest
+$ jupyter notebook index.ipynb</pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="interactive-release">
 <pre>$ conda create -n iab-0.1.3 -c etetoolkit -c conda-forge python=3.5 ete3 scikit-bio=0.4.2
 $ source activate iab-0.1.3
 $ pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/0.1.3.zip
@@ -61,19 +79,17 @@ $ pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinfo
                         <pre>$ source activate iab-0.1.3
 $ jupyter notebook index.ipynb</pre>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="interactive-dev">
-<pre>$ conda create -n iab-latest -c etetoolkit -c conda-forge python=3.5 ete3 scikit-bio=0.4.2
-$ source activate iab-latest
-$ pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
-</pre>
-                        <p>Next download the latest development version of the book:</p>
-                         <a href="http://readiab.org/book/latest/IAB-notebooks.zip" class="btn btn-success"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Latest Development Version</a>
-                        <p></p>
-                        <p>Unzip the book, change to the new directory that is created, and run:</p>
-                        <pre>$ source activate iab-latest
-$ jupyter notebook index.ipynb</pre>
-                            </div>
                         </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-info">
+                    <div class="panel-heading"><h4>Read Interactively on Binder (experimental)</h4></div>
+                    <div class="panel-body">
+                        <p><a href="https://mybinder.org">Binder 2.0</a> is a platform for interactively working with Jupyter notebooks without installing any software on your computer. We are working on making this the primary platform for reading IAB, but at present there is a known issue with the <i>Phylogentic reconstruction</i> chapter (you will not be able to run some cells that use <code>ete</code>).</p><br/>
+
+                    <a href="https://mybinder.org/v2/gh/caporaso-lab/built-iab/master?filepath=IAB-notebooks%2Findex.ipynb" class="btn btn-success btn-lg pull-right" target="_blank"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Read Latest Development Version</a>
                     </div>
                 </div>
 
